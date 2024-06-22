@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Capstone 4 API</title>
+</head>
+<body>
+   <section class="gradient-background">
+    <div class="container  px-4 pb-5  my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="<%=content%>" alt="random dog picture" >
+        <h1 class="display-5 fw-bold text-body-emphasis">Random Dog Generator!</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Welcome to the reandom dog picture generator! I used an API to pull random pictures and specific breeds.</p>
+        </div>
+    </div>
+   
+    <form id="myForm" method="post">
+        <label for="idInput">Breed:</label>
+        <select type="text"  class="btn btn-light dropdown-toggle"  id="idInput" name="breed">
+            
+            <option value="bulldog">Bull Dog</option>
+            <option value="hound">Hound</option>
+            <option value="dachshund">Dachshund</option>
+            <option value="husky">Husky</option>
+        </select>
+  
+        <label for="num">Number of Pictures:</label>
+        <input type="number" class="form-control" id="num" name="num">
+  
+        <label for="submit">Route:</label>
+        <input id="get" type="submit" class="btn btn-light btn-lg px-4" value="Random Picture" formaction="/get-picture">
+        <input id="get" type="submit" class="btn btn-light btn-lg px-4"value="See Many More Picture" formaction="/get-more">
+        <input id="post" type="submit" class="btn btn-light btn-lg px-4"value="Special Breed Picture" formaction="/get-breed">
+        
+      </form>
+
+
+    <div class="response-area">
+            <% console.log(content)%>
+      </div>
+  
+
+    </section>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
